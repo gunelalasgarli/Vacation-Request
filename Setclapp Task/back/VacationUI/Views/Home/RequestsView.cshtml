@@ -1,0 +1,35 @@
+﻿@model List<VacationRequest>
+@{
+    ViewData["Title"] = "RequestsView";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="card shadow mb-4">
+    <div class="card-body ">
+        <div class="table-responsive">
+            <table class="table table-bordered" width="100%" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Full Name</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody id="dataTable">
+                    @foreach (var item in Model)
+                    {
+                       
+                    <tr>
+                        <th scope="row">@item.RequestNo</th>
+                        <td>@item.EmployeeName</td>
+                        <td>@item.IsAccepted</td>
+
+                    </tr>
+                    }
+                </tbody>
+            </table>
+      
+        </div>
+    </div>
+</div>
+
+

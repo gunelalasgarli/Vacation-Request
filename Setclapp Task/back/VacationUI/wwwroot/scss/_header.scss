@@ -1,0 +1,17 @@
+#navbar {
+    .navbar {
+        .navbar-brand {
+            color: white;
+        }
+        .collapse {
+            .nav-list {
+                justify-content: flex-end;
+                .nav-item {
+                    a {
+                        color: white;
+                    }
+                }
+            }
+        }
+    }
+}

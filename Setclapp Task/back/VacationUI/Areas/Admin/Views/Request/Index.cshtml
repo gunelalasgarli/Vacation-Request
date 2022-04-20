@@ -1,0 +1,51 @@
+﻿@model List<VacationRequest>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+    int count=0;
+}
+
+
+
+<div class="card shadow mb-4">
+    <div class="card-body ">
+        <div class="table-responsive">
+            <table class="table table-bordered" width="100%" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Employee FullName</th>
+                        <th>Request Create date</th>
+                        <th>Vacation Type</th>
+                        <th>Status</th>
+                        <th>Settings</th>
+                    </tr>
+                </thead>
+                <tbody id="dataTable">
+                    @foreach (var item in Model)
+                    {
+                        count++;
+                    <tr>
+                        <th scope="row">@count</th>
+                        <td>@item.AppUser.FullName</td>
+                        <td>@item.CreatedAt</td>
+                        <td>@item.VacationType</td>
+                        <td>
+                            <a class="btn btn-outline-primary mb-2">
+                                @(item.IsAccepted==false?"Accept":"Reject" )
+                            </a>
+                        </td>
+
+                       
+                        <td class="col-md-3">
+                            <a class="btn btn-outline-primary" asp-action="detail" asp-route-id="@item.Id">Detail</a>
+                        </td>
+                    </tr>
+                    }
+                </tbody>
+            </table>
+            
+        </div>
+    </div>
+</div>
+

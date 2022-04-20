@@ -1,0 +1,28 @@
+﻿@model AppUser
+@{ Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml"; }
+
+<div class="container">
+    <table class="table table-striped table-dark">
+        <thead>
+            <tr>
+                <th>Fullname</th>
+                <th>Username</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>@Model.FullName</td>
+                <td>@Model.UserName</td>
+                <td>@Model.Email</td>
+
+
+
+            </tr>
+        </tbody>
+    </table>
+    <div class="mt-4 text-center">
+        <a asp-action="Index" class="btn btn-dark ml-3">Go Back</a>
+    </div>
+</div>
+

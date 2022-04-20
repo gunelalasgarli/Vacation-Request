@@ -1,0 +1,78 @@
+﻿@model RegisterVM
+
+@{ 
+   ViewData["Title"] = "Register";
+   Layout = "~/Views/Shared/_AccountLayout.cshtml";
+ }
+
+
+<div class="container">
+    <!-- Outer Row -->
+    <div class="row justify-content-center">
+
+        <div class="col-xl-6 col-lg-6 col-md-9">
+
+            <div class="card o-hidden border-0 shadow-lg my-5">
+                <div class="card-body p-0">
+                    <!-- Nested Row within Card Body -->
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="p-5">
+                                <div class="text-center">
+                                    <h1 class="h4 text-gray-900 mb-4">Hesab yaradın!</h1>
+                                </div>
+                                <div class="text-danger" asp-validation-summary="ModelOnly"></div>
+
+                                <form method="post" class="user">
+                                    <div class="form-group row">
+                                        <div class="col-sm-12 mb-3 mb-sm-0">
+                                            <input asp-for="FullName" type="text" class="form-control form-control-user" id="exampleFirstName" placeholder="Ad soyad">
+                                            <span asp-validation-for="FullName" class="text-danger"></span>
+
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <div class="col-sm-12 mb-3 mb-sm-0">
+                                            <input asp-for="UserName" type="text" class="form-control form-control-user" id="exampleUsername" placeholder="Username">
+                                            <span asp-validation-for="UserName" class="text-danger"></span>
+
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <input asp-for="Email" type="email" class="form-control form-control-user" id="exampleInputEmail" placeholder="Email">
+                                        <span asp-validation-for="Email" class="text-danger"></span>
+
+                                    </div>
+                                    <div class="form-group row">
+                                        <div class="col-sm-6 mb-3 mb-sm-0">
+                                            <input asp-for="Password" type="password" class="form-control form-control-user" id="exampleInputPassword" placeholder="Şifrə">
+                                            <span asp-validation-for="Password" class="text-danger"></span>
+
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <input asp-for="ConfirmPassword" type="password" class="form-control form-control-user" id="exampleRepeatPassword" placeholder="Şifrənizi təkrarlayın">
+                                            <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+
+                                        </div>
+                                        <div class="form-group">
+                                            <button type="submit" class="btn btn-primary btn-user btn-block" asp-controller="Account" asp-action="Register">Qeydiyyat edin</button>
+                                        </div>
+                                    </div>
+
+                                </form>
+                                <hr>
+                                <div class="text-center">
+                                    <a class="small"asp-controller="Account" asp-action="ForgotPassword">Şifrənizi unutmusunuz?</a>
+                                </div>
+                                <div class="text-center">
+                                    <a class="small" asp-controller="Account" asp-action="Login">Hesabınız var? Daxil olun!</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
