@@ -32,8 +32,9 @@
                         <td>@item.OccupantName</td>
                         <td>@item.VacationType.Name</td>
 
-                        <td>@(item.IsAccepted==true?"Accepted":"Rejected" )</td>
-                        @if (item.IsAccepted)
+                        <td>@((Status)item.StatusNum)
+                        </td>
+                        @if (item.StatusNum == 2)
                         {
                             <td>@item.AcceptedAt</td>
                         }

@@ -66,7 +66,7 @@ namespace VacationUI.Controllers
                 }
 
                 AppUser appUser = await _userManager.FindByNameAsync(User.Identity.Name);
-
+                request.StatusNum = (int)Domain.Entities.HomeModel.Enums.Status.New;
                 request.AppUserId = appUser.Id;
                 request.CreatedAt = DateTime.Now;
                 request.RequestNo="Q-"+ DateTime.Now.ToString("yyyy-MM-dd")+"-"+count.ToString("D4");

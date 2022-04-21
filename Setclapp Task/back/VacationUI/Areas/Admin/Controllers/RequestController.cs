@@ -47,29 +47,45 @@ namespace VacationUI.Areas.Admin.Controllers
 
             return View(request);
         }
-        public async Task<IActionResult> Accept(int id)
+        public async Task<IActionResult> Check(int id)
         {
             VacationRequest request = await _context.VacationRequests.FirstOrDefaultAsync(x => x.Id == id);
             if (request == null)
             {
                 return RedirectToAction("index");
             }
+            request.StatusNum = (int)Domain.Entities.HomeModel.Enums.Status.Pending;
 
-            if (request.IsAccepted) 
-            { 
-                request.IsAccepted = false;
-            } 
-            else 
-            { 
-
-                request.IsAccepted = true;
-                request.AcceptedAt = DateTime.Now;
-
-            }
 
             await _context.SaveChangesAsync();
             return RedirectToAction("index");
         }
+        public async Task<IActionResult> Accepted(int id)
+        {
+            VacationRequest request = await _context.VacationRequests.FirstOrDefaultAsync(x => x.Id == id);
+            if (request == null)
+            {
+                return RedirectToAction("index");
+            }
+            request.StatusNum = (int)Domain.Entities.HomeModel.Enums.Status.Accepted;
+            request.AcceptedAt = DateTime.Now;
+            await _context.SaveChangesAsync();
+            return RedirectToAction("index");
+        }
+        public async Task<IActionResult> Rejected(int id)
+        {
+            VacationRequest request = await _context.VacationRequests.FirstOrDefaultAsync(x => x.Id == id);
+            if (request == null)
+            {
+                return RedirectToAction("index");
+            }
+            request.StatusNum = (int)Domain.Entities.HomeModel.Enums.Status.Rejected;
+
+
+            await _context.SaveChangesAsync();
+            return RedirectToAction("index");
+        }
+        
 
     }
     }

@@ -16,10 +16,8 @@
                 <th scope="col">End date</th>
                 <th scope="col">Vacation Type</th>
                 <th scope="col">Created At</th>
-                @if (Model.IsAccepted)
-                {
-                    <th scope="col">Accepted At</th>
-                }
+                <th scope="col">Status</th>
+                <th scope="col">Accepted At</th>
             </tr>
         </thead>
         <tbody>
@@ -33,16 +31,17 @@
                 <td>@Model.VacationType.Name</td>
 
                 <td>@Model.CreatedAt</td>
-                @if (Model.IsAccepted)
+
+
+                <td>
+                    <a class="btn btn-outline-primary mb-2" asp-action="@(Model.StatusNum == 0?"Check": Model.StatusNum==1? "Accepted":Model.StatusNum == 2 ? "Rejected":"Accepted")" asp-route-id="@Model.Id">
+                        @((Status)Model.StatusNum)
+                    </a>
+                </td>
+                @if (Model.StatusNum == 2)
                 {
                     <td>@Model.AcceptedAt</td>
                 }
-
-                <td>
-                    <a asp-area="Admin" asp-controller="Request" asp-action="Accept" asp-route-id="@Model.Id" class="btn btn-outline-primary mb-2">
-                        @(Model.IsAccepted==false?"Accept":"Reject" )
-                    </a>
-                </td>
             </tr>
         </tbody>
 

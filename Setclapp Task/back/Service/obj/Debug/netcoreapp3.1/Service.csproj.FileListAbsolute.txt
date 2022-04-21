@@ -15,7 +15,6 @@ C:\Users\ASUS\Desktop\some tasks\Newrepo\Setclapp Task\back\Service\bin\Debug\ne
 C:\Users\ASUS\Desktop\some tasks\Newrepo\Setclapp Task\back\Service\bin\Debug\netcoreapp3.1\Service.runtimeconfig.dev.json
 C:\Users\ASUS\Desktop\some tasks\Newrepo\Setclapp Task\back\Service\bin\Debug\netcoreapp3.1\Service.dll
 C:\Users\ASUS\Desktop\some tasks\Newrepo\Setclapp Task\back\Service\bin\Debug\netcoreapp3.1\Service.pdb
-C:\Users\ASUS\Desktop\some tasks\Newrepo\Setclapp Task\back\Service\obj\Debug\netcoreapp3.1\Service.csproj.AssemblyReference.cache
 C:\Users\ASUS\Desktop\some tasks\Newrepo\Setclapp Task\back\Service\obj\Debug\netcoreapp3.1\Service.AssemblyInfoInputs.cache
 C:\Users\ASUS\Desktop\some tasks\Newrepo\Setclapp Task\back\Service\obj\Debug\netcoreapp3.1\Service.AssemblyInfo.cs
 C:\Users\ASUS\Desktop\some tasks\Newrepo\Setclapp Task\back\Service\obj\Debug\netcoreapp3.1\Service.csproj.CoreCompileInputs.cache

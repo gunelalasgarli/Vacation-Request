@@ -35,13 +35,20 @@ using Domain.Entities.HomeModel;
 #nullable disable
 #nullable restore
 #line 4 "C:\Users\ASUS\Desktop\some tasks\Newrepo\Setclapp Task\back\VacationUI\Areas\Admin\Views\_ViewImports.cshtml"
+using Domain.Entities.HomeModel.Enums;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 5 "C:\Users\ASUS\Desktop\some tasks\Newrepo\Setclapp Task\back\VacationUI\Areas\Admin\Views\_ViewImports.cshtml"
 using VacationUI.ViewModels.AccountViewModel;
 
 #line default
 #line hidden
 #nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"af0a4a6c3d6ad3421bf70f2b6d72c079fbae826e", @"/Areas/Admin/Views/User/Index.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"ab10a738ce11f73e3e9f3ba105d9cb24f63f9033", @"/Areas/Admin/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"99b40dd0f991918d1d44a13dbdc6a64a060e967e", @"/Areas/Admin/Views/_ViewImports.cshtml")]
     public class Areas_Admin_Views_User_Index : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<ICollection<AppUserVM>>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("asp-controller", "User", global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -154,7 +161,7 @@ using VacationUI.ViewModels.AccountViewModel;
 #line hidden
 #nullable disable
             WriteLiteral("                            <br />\n                                ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "af0a4a6c3d6ad3421bf70f2b6d72c079fbae826e9499", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "af0a4a6c3d6ad3421bf70f2b6d72c079fbae826e9728", async() => {
                 WriteLiteral("  Change Pass ");
             }
             );
@@ -195,7 +202,7 @@ using VacationUI.ViewModels.AccountViewModel;
 #line hidden
 #nullable disable
             WriteLiteral("                            ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "af0a4a6c3d6ad3421bf70f2b6d72c079fbae826e12398", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "af0a4a6c3d6ad3421bf70f2b6d72c079fbae826e12627", async() => {
                 WriteLiteral("\n                                Change Role\n                            ");
             }
             );
@@ -238,7 +245,7 @@ using VacationUI.ViewModels.AccountViewModel;
 #line hidden
 #nullable disable
             WriteLiteral("                            ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "af0a4a6c3d6ad3421bf70f2b6d72c079fbae826e15318", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "af0a4a6c3d6ad3421bf70f2b6d72c079fbae826e15547", async() => {
                 WriteLiteral("\n                                Detail\n                            ");
             }
             );
@@ -295,7 +302,7 @@ using VacationUI.ViewModels.AccountViewModel;
                                         <div class=""modal-body"">If you sure to Delete item click to Delete button.</div>
              ");
             WriteLiteral("                           <div class=\"modal-footer\">\n                                            <button class=\"btn btn-secondary\" type=\"button\" data-dismiss=\"modal\">Cancel</button>\n                                            ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "af0a4a6c3d6ad3421bf70f2b6d72c079fbae826e19431", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "af0a4a6c3d6ad3421bf70f2b6d72c079fbae826e19660", async() => {
                 WriteLiteral("Delete");
             }
             );
