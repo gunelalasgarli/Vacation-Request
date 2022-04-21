@@ -27,8 +27,8 @@
                     <tr>
                         <th scope="row">@item.RequestNo</th>
                         <td>@item.EmployeeName</td>
-                        <td>@item.StartDate</td>
-                        <td>@item.EndDate</td>
+                        <td>@item.StartDate.ToShortDateString()</td>
+                        <td>@item.EndDate.ToShortDateString()</td>
                         <td>@item.OccupantName</td>
                         <td>@item.VacationType.Name</td>
 

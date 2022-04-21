@@ -1,11 +1,24 @@
 ﻿@model VacationRequest
 
-@{ 
+@{
     ViewData["Title"] = "Company Name";
     Layout = "~/Views/Shared/_Layout.cshtml";
     List<VacationType> types = (List<VacationType>)ViewBag.VacationTypes;
 
+}
+@if (TempData["Success"] != null)
+{
+
+    @if ((bool)TempData["Success"] == true)
+    {
+        <input type="hidden" id="success" />
     }
+    else
+    {
+        <input type="hidden" id="error" />
+
+    }
+}
 
 
 <main>
@@ -17,36 +30,36 @@
                     <form method="post" class="row">
                         <div class="col-12">
                             <label asp-for="@Model.EmployeeName" for="inputfullname4" class="form-label">Ad, soyad, ata adı</label>
-                            <input type="text" asp-for="@Model.EmployeeName" class="form-control" id="inputfullname4">
+                            <input type="text" asp-for="@Model.EmployeeName" autocomplete="off" class="form-control" id="inputfullname4">
                             <span asp-validation-for="@Model.EmployeeName" class="text-danger"></span>
                         </div>
                         <div class="col-12">
                             <label asp-for="@Model.Position" for="inputposition4" class="form-label">Vəzifə</label>
-                            <input type="text"asp-for="@Model.Position" class="form-control" id="inputposition4">
+                            <input type="text" asp-for="@Model.Position"  autocomplete="off" class="form-control" id="inputposition4">
                             <span asp-validation-for="@Model.Position" class="text-danger"></span>
                         </div>
                         <div class="col-12">
                             <label asp-for="@Model.StartDate" for="inputstartdate" class="form-label">Məzuniyyət başlama tarixi</label>
-                            <input asp-for="@Model.StartDate" type="date" class="form-control" id="inputstartdate">
+                            <input asp-for="@Model.StartDate" type="date"  class="form-control" id="inputstartdate">
                             <span asp-validation-for="@Model.StartDate" class="text-danger"></span>
 
                         </div>
                         <div class="col-12">
                             <label asp-for="@Model.EndDate" for="inputenddate" class="form-label">Məzuniyyət bitmə tarixi</label>
-                            <input asp-for="@Model.EndDate" type="date" class="form-control" id="inputenddate">
+                            <input asp-for="@Model.EndDate" type="date"   class="form-control" id="inputenddate">
                             <span asp-validation-for="@Model.EndDate" class="text-danger"></span>
                         </div>
                         <div class="col-12">
-                            <label asp-for="OccupantName" for="inputalternate" class="form-label">Əvəz edən çəxsin ad, soyad və ata adı</label>
-                            <input asp-for="OccupantName" type="text" class="form-control" id="inputalternate">
-                            <span asp-validation-for="@Model.EndDate" class="text-danger"></span>
+                            <label asp-for="@Model.OccupantName" for="inputalternate" class="form-label">Əvəz edən çəxsin ad, soyad və ata adı</label>
+                            <input asp-for="@Model.OccupantName" type="text"  autocomplete="off" class="form-control" id="inputalternate">
+                            <span asp-validation-for="@Model.OccupantName" class="text-danger"></span>
                         </div>
                         <div class="form-group col-12">
                             <label asp-for="@Model.VacationTypeId">Category</label>
                             <select class="form-control" asp-for="@Model.VacationTypeId" asp-items="@(new SelectList(types,"Id","Name"))">
                             </select>
                         </div>
-                        
+
                         <div class="col-12">
                             @if (User.Identity.IsAuthenticated)
                             {
@@ -65,3 +78,35 @@
         </div>
     </section>
 </main>
+
+@section Scripts{
+    <script>
+        $(document).ready(function () {
+
+            toastr.options = {
+                "closeButton": false,
+                "debug": false,
+                "newestOnTop": false,
+                "progressBar": false,
+                "positionClass": "toast-top-right",
+                "preventDuplicates": false,
+                "onclick": null,
+                "showDuration": "300",
+                "hideDuration": "1000",
+                "timeOut": "2000",
+                "extendedTimeOut": "1000",
+                "showEasing": "swing",
+                "hideEasing": "linear",
+                "showMethod": "fadeIn",
+                "hideMethod": "fadeOut"
+            }
+            if ($("#success").length) {
+                toastr["success"]("Tələbnamə göndərildi!")
+            }
+            else if ($("#error").length) {
+                toastr["error"]("Xəta baş verdi!")
+            }
+
+        })
+    </script>
+}

@@ -28,8 +28,8 @@
                 <td>@Model.EmployeeName</td>
                 <td>@Model.Position</td>
                 <td>@Model.OccupantName</td>
-                <td>@Model.StartDate</td>
-                <td>@Model.EndDate</td>
+                <td>@Model.StartDate.ToShortDateString()</td>
+                <td>@Model.EndDate.ToShortDateString()</td>
                 <td>@Model.VacationType.Name</td>
 
                 <td>@Model.CreatedAt</td>
