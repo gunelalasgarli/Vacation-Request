@@ -177,3 +177,4 @@ C:\Users\ASUS\source\repos\VacationUI\bin\Debug\netcoreapp3.1\Microsoft.Extensio
 C:\Users\ASUS\source\repos\VacationUI\bin\Debug\netcoreapp3.1\Microsoft.Extensions.FileProviders.Physical.dll
 C:\Users\ASUS\source\repos\VacationUI\bin\Debug\netcoreapp3.1\Microsoft.Extensions.FileSystemGlobbing.dll
 C:\Users\ASUS\source\repos\VacationUI\obj\Debug\netcoreapp3.1\Razor\Views\Home\RequestsView.cshtml.g.cs
+C:\Users\ASUS\source\repos\VacationUI\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Request\Detail.cshtml.g.cs

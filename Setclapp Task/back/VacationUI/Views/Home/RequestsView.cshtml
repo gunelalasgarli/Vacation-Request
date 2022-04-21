@@ -2,6 +2,8 @@
 @{
     ViewData["Title"] = "RequestsView";
     Layout = "~/Views/Shared/_Layout.cshtml";
+    List<VacationType> types = (List<VacationType>)ViewBag.VacationTypes;
+
 }
 <div class="card shadow mb-4">
     <div class="card-body ">
@@ -11,7 +13,12 @@
                     <tr>
                         <th>#</th>
                         <th>Full Name</th>
+                        <th>Start date</th>
+                        <th>End date</th>
+                        <th>Occupant Name</th>
+                        <th>Vacation Type</th>
                         <th>Status</th>
+                        <th>Accepted At</th>
                     </tr>
                 </thead>
                 <tbody id="dataTable">
@@ -21,7 +28,19 @@
                     <tr>
                         <th scope="row">@item.RequestNo</th>
                         <td>@item.EmployeeName</td>
-                        <td>@item.IsAccepted</td>
+                        <td>@item.StartDate</td>
+                        <td>@item.EndDate</td>
+                        <td>@item.OccupantName</td>
+                        <td>
+                            <select class="form-control" disabled asp-for="@item.VacationTypeId" asp-items="@(new SelectList(types,"Id","Name"))">
+                            </select>
+                        </td>
+
+                        <td>@(item.IsAccepted==true?"Accepted":"Rejected" )</td>
+                        @if (item.IsAccepted)
+                        {
+                            <td>@item.AcceptedAt</td>
+                        }
 
                     </tr>
                     }

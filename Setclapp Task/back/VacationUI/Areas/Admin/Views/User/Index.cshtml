@@ -1,6 +1,8 @@
 ﻿@model ICollection<AppUserVM>
 @{
     Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+    List<VacationType> types = (List<VacationType>)ViewBag.VacationTypes;
+
 }
 
 <div class="col-lg-12 grid-margin stretch-card">
@@ -28,30 +30,30 @@
                     <tbody>
                         @foreach (AppUserVM user in Model)
                         {
-            <tr>
-                <td>@user.FullName</td>
-                <td>@user.UserName</td>
-                <td>@user.Role</td>
+                        <tr>
+                            <td>@user.FullName</td>
+                            <td>@user.UserName</td>
+                            <td>@user.Role</td>
 
-                <td>
-
-
-                    @if (user.UserName == User.Identity.Name)
-                    {
-    <br />
-                        <a asp-controller="User" asp-action="ChangePassword" asp-route-id="@user.Id" class="btn btn-outline-primary mb-2">  Change Pass </a>}
-                    <a asp-controller="User" asp-action="ChangeRole" asp-route-id="@user.Id" class="btn btn-outline-info mb-2">
-                        Change Role
-                    </a>
-                    @if (user.UserName != User.Identity.Name)
-                    {
-    <a asp-controller="User" asp-action="Detail" asp-route-id="@user.Id" class="btn btn-outline-warning mb-2">
-        Detail
-    </a>}
+                            <td>
 
 
-                </td>
-            </tr>
+                            @if (user.UserName == User.Identity.Name)
+                            {
+                            <br />
+                                <a asp-controller="User" asp-action="ChangePassword" asp-route-id="@user.Id" class="btn btn-outline-primary mb-2">  Change Pass </a>}
+                            <a asp-controller="User" asp-action="ChangeRole" asp-route-id="@user.Id" class="btn btn-outline-info mb-2">
+                                Change Role
+                            </a>
+                            @if (user.UserName != User.Identity.Name)
+                            {
+                            <a asp-controller="User" asp-action="Detail" asp-route-id="@user.Id" class="btn btn-outline-warning mb-2">
+                                Detail
+                            </a>}
+
+
+                                </td>
+                            </tr>
                             <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
                                  aria-hidden="true">
                                 <div class="modal-dialog" role="document">
