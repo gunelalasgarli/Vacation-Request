@@ -5815,11 +5815,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ASUS\\source\\repos\\Service\\Service.csproj",
+      "projectUniqueName": "C:\\Users\\ASUS\\Desktop\\some tasks\\Newrepo\\Setclapp Task\\back\\Service\\Service.csproj",
       "projectName": "Service",
-      "projectPath": "C:\\Users\\ASUS\\source\\repos\\Service\\Service.csproj",
+      "projectPath": "C:\\Users\\ASUS\\Desktop\\some tasks\\Newrepo\\Setclapp Task\\back\\Service\\Service.csproj",
       "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ASUS\\source\\repos\\Service\\obj\\",
+      "outputPath": "C:\\Users\\ASUS\\Desktop\\some tasks\\Newrepo\\Setclapp Task\\back\\Service\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",

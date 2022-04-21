@@ -29,7 +29,7 @@ namespace VacationUI.Areas.Admin.Controllers
 
         public async Task<IActionResult> Index()
         {
-            List<VacationRequest> requests = await _context.VacationRequests.OrderByDescending(x => x.CreatedAt).ToListAsync();
+            List<VacationRequest> requests = await _context.VacationRequests.Include(x=>x.VacationType).OrderByDescending(x => x.CreatedAt).ToListAsync();
             ViewBag.VacationTypes = await _context.VacationTypes.ToListAsync();
             return View(requests);
         }
@@ -37,7 +37,7 @@ namespace VacationUI.Areas.Admin.Controllers
         public async Task<IActionResult> Detail(int? id)
         {
             if (id == null) return RedirectToAction("Index", "Error");
-            VacationRequest request = await _context.VacationRequests.FirstOrDefaultAsync(c => c.Id == id);
+            VacationRequest request = await _context.VacationRequests.Include(x => x.VacationType).FirstOrDefaultAsync(c => c.Id == id);
             ViewBag.VacationTypes = await _context.VacationTypes.ToListAsync();
 
             return View(request);

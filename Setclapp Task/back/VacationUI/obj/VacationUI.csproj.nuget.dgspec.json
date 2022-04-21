@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ASUS\\source\\repos\\VacationUI\\VacationUI.csproj": {}
+    "C:\\Users\\ASUS\\Desktop\\some tasks\\Newrepo\\Setclapp Task\\back\\VacationUI\\VacationUI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ASUS\\source\\repos\\Domain\\Domain.csproj": {
+    "C:\\Users\\ASUS\\Desktop\\some tasks\\Newrepo\\Setclapp Task\\back\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ASUS\\source\\repos\\Domain\\Domain.csproj",
+        "projectUniqueName": "C:\\Users\\ASUS\\Desktop\\some tasks\\Newrepo\\Setclapp Task\\back\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "C:\\Users\\ASUS\\source\\repos\\Domain\\Domain.csproj",
+        "projectPath": "C:\\Users\\ASUS\\Desktop\\some tasks\\Newrepo\\Setclapp Task\\back\\Domain\\Domain.csproj",
         "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ASUS\\source\\repos\\Domain\\obj\\",
+        "outputPath": "C:\\Users\\ASUS\\Desktop\\some tasks\\Newrepo\\Setclapp Task\\back\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -95,14 +95,14 @@
         }
       }
     },
-    "C:\\Users\\ASUS\\source\\repos\\Service\\Service.csproj": {
+    "C:\\Users\\ASUS\\Desktop\\some tasks\\Newrepo\\Setclapp Task\\back\\Service\\Service.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ASUS\\source\\repos\\Service\\Service.csproj",
+        "projectUniqueName": "C:\\Users\\ASUS\\Desktop\\some tasks\\Newrepo\\Setclapp Task\\back\\Service\\Service.csproj",
         "projectName": "Service",
-        "projectPath": "C:\\Users\\ASUS\\source\\repos\\Service\\Service.csproj",
+        "projectPath": "C:\\Users\\ASUS\\Desktop\\some tasks\\Newrepo\\Setclapp Task\\back\\Service\\Service.csproj",
         "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ASUS\\source\\repos\\Service\\obj\\",
+        "outputPath": "C:\\Users\\ASUS\\Desktop\\some tasks\\Newrepo\\Setclapp Task\\back\\Service\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -178,14 +178,14 @@
         }
       }
     },
-    "C:\\Users\\ASUS\\source\\repos\\VacationUI\\VacationUI.csproj": {
+    "C:\\Users\\ASUS\\Desktop\\some tasks\\Newrepo\\Setclapp Task\\back\\VacationUI\\VacationUI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ASUS\\source\\repos\\VacationUI\\VacationUI.csproj",
+        "projectUniqueName": "C:\\Users\\ASUS\\Desktop\\some tasks\\Newrepo\\Setclapp Task\\back\\VacationUI\\VacationUI.csproj",
         "projectName": "VacationUI",
-        "projectPath": "C:\\Users\\ASUS\\source\\repos\\VacationUI\\VacationUI.csproj",
+        "projectPath": "C:\\Users\\ASUS\\Desktop\\some tasks\\Newrepo\\Setclapp Task\\back\\VacationUI\\VacationUI.csproj",
         "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ASUS\\source\\repos\\VacationUI\\obj\\",
+        "outputPath": "C:\\Users\\ASUS\\Desktop\\some tasks\\Newrepo\\Setclapp Task\\back\\VacationUI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -207,11 +207,11 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\Users\\ASUS\\source\\repos\\Domain\\Domain.csproj": {
-                "projectPath": "C:\\Users\\ASUS\\source\\repos\\Domain\\Domain.csproj"
+              "C:\\Users\\ASUS\\Desktop\\some tasks\\Newrepo\\Setclapp Task\\back\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\Users\\ASUS\\Desktop\\some tasks\\Newrepo\\Setclapp Task\\back\\Domain\\Domain.csproj"
               },
-              "C:\\Users\\ASUS\\source\\repos\\Service\\Service.csproj": {
-                "projectPath": "C:\\Users\\ASUS\\source\\repos\\Service\\Service.csproj"
+              "C:\\Users\\ASUS\\Desktop\\some tasks\\Newrepo\\Setclapp Task\\back\\Service\\Service.csproj": {
+                "projectPath": "C:\\Users\\ASUS\\Desktop\\some tasks\\Newrepo\\Setclapp Task\\back\\Service\\Service.csproj"
               }
             }
           }

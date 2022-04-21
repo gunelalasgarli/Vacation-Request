@@ -2,7 +2,6 @@
 @{
     ViewData["Title"] = "Index";
     Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
-    List<VacationType> types = (List<VacationType>)ViewBag.VacationTypes;
     int count =0;
 }
 
@@ -14,9 +13,9 @@
             <table class="table table-bordered" width="100%" cellspacing="0">
                 <thead>
                     <tr>
-                        <th>#</th>
+                        <th>Request No</th>
                         <th>Employee FullName</th>
-                        <th>Request Create date</th>
+                        <th>Create date</th>
                         <th>Vacation Type</th>
                         <th>Status</th>
                         <th>Settings</th>
@@ -25,15 +24,12 @@
                 <tbody id="dataTable">
                     @foreach (var item in Model)
                     {
-                        count++;
+                       
                     <tr>
-                        <th scope="row">@count</th>
+                        <th scope="row">@item.RequestNo</th>
                         <td>@item.EmployeeName</td>
                         <td>@item.CreatedAt</td>
-                        <td>
-                            <select class="form-control" disabled asp-for="@item.VacationTypeId" asp-items="@(new SelectList(types,"Id","Name"))">
-                            </select>
-                        </td>
+                        <td>@item.VacationType.Name</td>
                         <td>
                             <a asp-area="Admin" asp-controller="Request" asp-action="Accept" asp-route-id="@item.Id" class="btn btn-outline-primary mb-2">
                                 @(item.IsAccepted==false?"Accept":"Reject" )

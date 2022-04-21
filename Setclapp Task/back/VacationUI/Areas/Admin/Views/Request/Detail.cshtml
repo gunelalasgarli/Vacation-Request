@@ -3,21 +3,23 @@
     ViewData["Title"] = "Detail";
     Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
 
-    List<VacationType> types = (List<VacationType>)ViewBag.VacationTypes;
-
 }
 
     <table class="table table-striped">
         <thead>
             <tr>
-                <th scope="col">Name</th>
-                <th scope="col">Surname</th>
-                <th scope="col">Email</th>
-                <th scope="col">Phone</th>
+                <th scope="col">Request No</th>
+                <th scope="col">Employee Name</th>
+                <th scope="col">Position/th>
+                <th scope="col">Occupant Name</th>
+                <th scope="col">Start date</th>
+                <th scope="col">End date</th>
+                <th scope="col">Vacation Type</th>
                 <th scope="col">Created At</th>
-                @if (Model.IsAccepted) 
-                { <th scope="col">Accepted At</th>}
-                <th scope="col">Message Description</th>
+                @if (Model.IsAccepted)
+                {
+                    <th scope="col">Accepted At</th>
+                }
             </tr>
         </thead>
         <tbody>
@@ -28,14 +30,13 @@
                 <td>@Model.OccupantName</td>
                 <td>@Model.StartDate</td>
                 <td>@Model.EndDate</td>
-                <td><select class="form-control" disabled asp-for="@Model.VacationTypeId" asp-items="@(new SelectList(types,"Id","Name"))">
-                </select></td>
-                
+                <td>@Model.VacationType.Name</td>
+
                 <td>@Model.CreatedAt</td>
                 @if (Model.IsAccepted)
                 {
                     <td>@Model.AcceptedAt</td>
-}
+                }
 
                 <td>
                     <a asp-area="Admin" asp-controller="Request" asp-action="Accept" asp-route-id="@Model.Id" class="btn btn-outline-primary mb-2">

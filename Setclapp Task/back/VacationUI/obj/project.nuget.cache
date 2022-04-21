@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "x7bCNNe5LLNC6DfrSU/nUUMTroJQ9lxIsnn9hC414OIYs7MHzIqWeq3TQmGiudREyDRLqAgJ1JKVl5cRWBnq7A==",
+  "dgSpecHash": "ky4jnIkN2PVDIdH5c6q7ETwLpU4n1YyZHkE0P2K2cV7loZur4O53qTcKX5TtswivZqjwYtVrKHLD1QO13LwRmw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\ASUS\\source\\repos\\VacationUI\\VacationUI.csproj",
+  "projectFilePath": "C:\\Users\\ASUS\\Desktop\\some tasks\\Newrepo\\Setclapp Task\\back\\VacationUI\\VacationUI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ASUS\\.nuget\\packages\\mailkit\\3.2.0\\mailkit.3.2.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.aspnetcore.authentication\\2.2.0\\microsoft.aspnetcore.authentication.2.2.0.nupkg.sha512",

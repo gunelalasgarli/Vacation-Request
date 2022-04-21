@@ -28,7 +28,7 @@ namespace VacationUI.Controllers
         public async Task<IActionResult> RequestsView()
         {
             
-            List<VacationRequest> requests = await _context.VacationRequests.OrderByDescending(x => x.CreatedAt).Where(x=>x.AppUser.UserName==User.Identity.Name).ToListAsync();
+            List<VacationRequest> requests = await _context.VacationRequests.Include(x => x.VacationType).OrderByDescending(x => x.CreatedAt).Where(x=>x.AppUser.UserName==User.Identity.Name).ToListAsync();
             ViewBag.VacationTypes = await _context.VacationTypes.ToListAsync();
 
             return View(requests);

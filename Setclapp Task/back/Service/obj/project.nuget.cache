@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "M+j15NJPF0NqfxEYogXdEYEgpulyeS6m2kSCv/Zj2YVnOIX0Df7DnpLXyDPYx2Z4zmhqcy0aCeExVdwzbU90Bg==",
+  "dgSpecHash": "vRAVP9gMs0+dVEwah6SZ1wqvrwSxUKZJrA9icRupaDfBaBJIKp0KFToIDeQNmycI5pJP5SyF5SmPmfGDrdAhBw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\ASUS\\source\\repos\\Service\\Service.csproj",
+  "projectFilePath": "C:\\Users\\ASUS\\Desktop\\some tasks\\Newrepo\\Setclapp Task\\back\\Service\\Service.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ASUS\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\ASUS\\.nuget\\packages\\microsoft.bcl.hashcode\\1.1.1\\microsoft.bcl.hashcode.1.1.1.nupkg.sha512",
