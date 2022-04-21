@@ -31,6 +31,11 @@ namespace VacationUI.Areas.Admin.Controllers
         {
             List<VacationRequest> requests = await _context.VacationRequests.Include(x=>x.VacationType).OrderByDescending(x => x.CreatedAt).ToListAsync();
             ViewBag.VacationTypes = await _context.VacationTypes.ToListAsync();
+            if (requests == null)
+            {
+                return RedirectToAction("index");
+            }
+
             return View(requests);
         }
 
