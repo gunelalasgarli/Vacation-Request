@@ -51,7 +51,7 @@ namespace VacationUI.Controllers
             }
             else
             {
-                int count = 1;
+                
                 ViewBag.VacationTypes = await _context.VacationTypes.ToListAsync();
 
                 TempData["Success"] = false;
@@ -64,17 +64,24 @@ namespace VacationUI.Controllers
                 {
                     return View();
                 }
-
+                int count = 1;
+                List<VacationRequest> requests = await _context.VacationRequests.Where(x => x.AppUser.UserName == User.Identity.Name).ToListAsync();
+                foreach (var item in requests)
+                {
+                    count++;
+                }
                 AppUser appUser = await _userManager.FindByNameAsync(User.Identity.Name);
                 request.StatusNum = (int)Domain.Entities.HomeModel.Enums.Status.New;
                 request.AppUserId = appUser.Id;
                 request.CreatedAt = DateTime.Now;
-                request.RequestNo="Q-"+ DateTime.Now.ToString("yyyy-MM-dd")+"-"+count.ToString("D4");
+                request.RequestNo = "Q-" + DateTime.Now.ToString("yyyy-MM-dd") + "-" + count.ToString("D4");
 
                 await _context.VacationRequests.AddAsync(request);
                 await _context.SaveChangesAsync();
                 TempData["Success"] = true;
-                count++;
+
+               
+
 
             }
             return RedirectToAction("index");
